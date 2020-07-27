@@ -58,6 +58,10 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
+  if(Math.floor(numero)){
+    return true
+  }
+  return false;
 }
 
 function fizzBuzz(numero) {
@@ -65,6 +69,17 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
+  if(numero % 3 === 0 && numero % 5 === 0){
+    return 'fizzbuzz'
+  }
+  if(numero % 3 === 0 ){
+    return 'fizz';
+  }
+  if(numero % 5 === 0){
+    return 'buzz';
+  }else{
+    return numero;
+  }
 }
 
 function esPrimo(numero) {
@@ -73,6 +88,19 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+  if(numero <= 1) return false
+  var primo = 0;
+
+for(var i = 1; i < numero.length; i++){
+ primo += numero[i];
+   primo = primo + 1;
+ }
+if(numero % 2 === 1){
+   return true;
+}else if(numero % 2 !== 1){
+  return false
+}
+
 }
 
 
